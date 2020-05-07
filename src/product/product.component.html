@@ -4,15 +4,15 @@
 			<div *ngFor="let product of products">
 
 				<div class="col-md-10 product-back">
-         <span class="col-md-4 float-left"> <img [src]="product.img" class="img-responsive" width="200px" /> </span>
-         <span class="col-md-8 float-left"> {{product.desc}} </span>
-         <span class="col-md-3 float-left"> Price -  {{product.price | currency:'INR'}} </span>
+					<span class="col-md-4 float-left"> <img [src]="product.img" class="img-responsive" width="200px" /> </span>
+					<span class="col-md-8 float-left"> {{product.desc}} </span>
+					<span class="col-md-3 float-left"> Price -  {{product.price | currency:'INR'}} </span>
 
-<span class="col-md-5 float-right">
-  <a routerLink="/product-detail"> Detail </a>
-   </span>
+					<span class="col-md-5 float-right">
+             <a routerLink="/product-detail" (click)="showDetail(product)"> Detail </a>
+          </span>
 
-          </div>
+				</div>
 			</div>
 		</div>
 	</div>
