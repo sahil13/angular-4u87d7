@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-products=[{
+product=[{
 	"name": "lux",
 	"desc": "Indulge in a sensorial experience with breakthrough Floral Beauty Oil that gives you a fragrance bloom two times better than real flowers.",
 	"location": [{
@@ -16,9 +16,12 @@ products=[{
 	}],
 	"img": "lux.png",
 	"price": "70"
-}]
+}];
 
-  constructor() {}
+products;
+  constructor() {
+    this.products=this.product;
+  }
 
   ngOnInit() {
   }
