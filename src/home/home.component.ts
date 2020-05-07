@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 declare var jQuery: any;
 @Component({
   selector: 'app-home',
@@ -7,7 +8,16 @@ declare var jQuery: any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+loginForm;
+  constructor(private fb:FormBuilder) {
+
+this.loginForm=fb.group({
+  product_name:new FormControl(),
+  product_price: new FormControl(),
+  product_desc:new FormControl()
+})
+
+   }
 
   ngOnInit() {
   }
