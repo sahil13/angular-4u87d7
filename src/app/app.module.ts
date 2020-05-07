@@ -20,7 +20,7 @@ import { ProductDetailComponent } from "../product-detail/product-detail.compone
       { path: "", component: HomeComponent },
       { path: "login", component: LoginComponent },
       { path: "products", component: ProductComponent },
-      { path: "product-detail/:product", component: ProductDetailComponent }
+      { path: "product-detail", component: ProductDetailComponent }
     ])
   ],
   declarations: [

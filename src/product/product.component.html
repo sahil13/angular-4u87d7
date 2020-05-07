@@ -9,8 +9,10 @@
 					<span class="col-md-3 float-left"> Price -  {{product.price | currency:'INR'}} </span>
 
 					<span class="col-md-5 float-right">
-             <a routerLink=["/product-detail",product] > Detail </a>
+             <a routerLink="/product-detail" > Detail </a>
           </span>
+
+<app-product-detail [product]="product"></app-product-detail>
 
 				</div>
 			</div>
