@@ -9,7 +9,7 @@ export class ProductDetailComponent implements OnInit {
 
 @Input() product;
   constructor() {
-    console.log(product);
+    console.log(this.product);
    }
 
   ngOnInit() {
