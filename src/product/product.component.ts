@@ -14,7 +14,7 @@ product=[{
 		"street": "123",
 		"city": "gurgaon"
 	}],
-	"img": "https://images-na.ssl-images-amazon.com/images/I/618oWHEzQ0L._SL1000_.jpg",
+	"img": "https://www.hul.co.in/Images/India-LUX-new-hand-wash-collection-310818_tcm1255-525690.jpg",
 	"price": "70"
 }];
 
