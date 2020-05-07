@@ -3,7 +3,7 @@
 	<form [formGroup]="loginForm" autocomplete="off">
 
 		<div class="form-group">
-			<label>Product Name</label>
+			<label>User Name</label>
 			<input class="form-control" formControlName="product_name" name="product_name" required />
       <div class="text text-danger text-right" *ngIf="loginForm.get('product_name').touched && loginForm.get('product_name').invalid">
         <div *ngIf="loginForm.get('product_name').errors.required">Required</div>
@@ -14,16 +14,11 @@
 </div>
 
 			<div class="form-group">
-				<label>Price</label>
-				<input class="form-control" formControlName="product_price" name="product_price" />
+				<label>Password</label>
+				<input class="form-control" formControlName="password" name="password" />
 </div>
 
-				<div class="form-group">
-					<label>Description</label>
-					<input class="form-control" formControlName="product_desc" name="product_desc" />
-</div>
-
-					<button class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
+			<button class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form>
 <a routerLink="login">Reactive Form Using FormGroup >> </a>
