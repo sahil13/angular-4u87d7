@@ -12,12 +12,14 @@ loginForm;
   constructor(private fb:FormBuilder) {
 
 this.loginForm=fb.group({
-  product_name:['',Validators.required],
+  product_name:['',[Validators.required,Validators.maxLength(3)]],
   product_price: new FormControl(),
   product_desc:new FormControl()
 })
 
    }
+
+   
 
   ngOnInit() {
   }

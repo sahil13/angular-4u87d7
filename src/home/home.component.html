@@ -3,18 +3,21 @@
 
 		<div class="form-group">
 			<label>Product Name</label>
-			<input class="form-control" FormControlName="product_name" name="product_name" />
-      <div *ngIf="loginForm.get('product_name').touched && loginForm.get('product_name').invalid">Required</div>
+			<input class="form-control" formControlName="product_name" name="product_name" required />
+      <div class="alert alert-danger" *ngIf="loginForm.get('product_name').touched && loginForm.get('product_name').invalid">
+        <div *ngIf="loginForm.get('product_name').errors.required">Required</div>
+        <div *ngIf="loginForm.get('product_name').errors.maxLength">Product name should be 3 digit long</div>
+        </div>
 </div>
 
 			<div class="form-group">
 				<label>Price</label>
-				<input class="form-control" FormControlName="product_price" name="product_price" />
+				<input class="form-control" formControlName="product_price" name="product_price" />
 </div>
 
 				<div class="form-group">
 					<label>Description</label>
-					<input class="form-control" FormControlName="product_desc" name="product_desc" />
+					<input class="form-control" formControlName="product_desc" name="product_desc" />
 </div>
 
 					<button class="btn btn-primary">Submit</button>
