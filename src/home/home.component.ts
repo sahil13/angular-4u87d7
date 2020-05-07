@@ -12,7 +12,7 @@ loginForm;
   constructor(private fb:FormBuilder) {
 
 this.loginForm=fb.group({
-  product_name:['',[Validators.required,Validators.maxLength(3)]],
+  product_name:['',[Validators.required,Validators.maxLength(5),Validators.minLength(3),Validators.pattern('sahil')]],
   product_price: new FormControl(),
   product_desc:new FormControl()
 })
