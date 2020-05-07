@@ -1,25 +1,27 @@
-<br/><div class="col-md-6 offset-md-3">
-<h1>Form Group </h1>
+<br/>
+<div class="col-md-6 offset-md-3">
+	<h1>Form Group </h1>
 	<form [formGroup]="loginForm" autocomplete="off">
 
 		<div class="form-group">
 			<label>User Name</label>
 			<input (ngModel)="name" class="form-control" formControlName="name" name="name" required #name />
-      <div class="text text-danger text-right" *ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid" >
-        <div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div>
-        </div>
-</div>
+			<div class="text text-danger text-right"
+				*ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid">
+				<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div>
+			</div>
+		</div>
 
-			<div class="form-group">
-				<label>Password</label>
-				<input class="form-control" formControlName="password" name="password" />
+		<div class="form-group">
+			<label>Password</label>
+			<input class="form-control" formControlName="password" name="password" />
 </div>
 
 			<button class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form>
-<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
-<a routerLink="">Template driven Form >> </a>
+	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
+	<a routerLink="">Template driven Form >> </a>
 </div>
 
 
