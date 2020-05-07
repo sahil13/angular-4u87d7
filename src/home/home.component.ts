@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 declare var jQuery: any;
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ loginForm;
   constructor(private fb:FormBuilder) {
 
 this.loginForm=fb.group({
-  product_name:new FormControl(),
+  product_name:['',Validators.required],
   product_price: new FormControl(),
   product_desc:new FormControl()
 })

@@ -3,7 +3,8 @@
 
 		<div class="form-group">
 			<label>Product Name</label>
-			<input class="form-control" FormControlName="product_name" name="product_name" />
+			<input class="form-control" FormControlName="product_name" name="product_name" required />
+      <div *ngIf="loginForm.get('product_name').invalid && loginForm.get('product_name').touched">Required</div>
 </div>
 
 			<div class="form-group">
