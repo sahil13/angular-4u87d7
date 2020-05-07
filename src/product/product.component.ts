@@ -14,7 +14,7 @@ product=[{
 		"street": "123",
 		"city": "gurgaon"
 	}],
-	"img": "lux.png",
+	"img": "https://images-na.ssl-images-amazon.com/images/I/618oWHEzQ0L._SL1000_.jpg",
 	"price": "70"
 }];
 
