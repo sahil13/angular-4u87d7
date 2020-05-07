@@ -6,7 +6,7 @@
 			<input class="form-control" formControlName="product_name" name="product_name" required />
       <div class="alert alert-danger" *ngIf="loginForm.get('product_name').touched && loginForm.get('product_name').invalid">
         <div *ngIf="loginForm.get('product_name').errors.required">Required</div>
-        <div *ngIf="loginForm.get('product_name').errors.maxLength">Product name should be 3 digit long</div>
+        <div *ngIf="loginForm.get('product_name').errors.maxlength">Product name should be {{loginForm.get('product_name').maxlength.requiredLength}} digit long</div>
         </div>
 </div>
 
