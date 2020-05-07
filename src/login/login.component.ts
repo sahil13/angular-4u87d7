@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   password;
 
   constructor() {
-    this.name=new FormControl('',Validators.required);
+    this.name=new FormControl('',[Validators.required,Validators.maxLength(3)]);
     this.password=new FormControl('',Validators.required);
     this.loginForm = new FormGroup({
       name:this.name,
