@@ -1,15 +1,12 @@
 <br/><div class="col-md-6 offset-md-3">
-<h1>Form Builder </h1>
+<h1>Form Group </h1>
 	<form [formGroup]="loginForm" autocomplete="off">
 
 		<div class="form-group">
 			<label>User Name</label>
-			<input class="form-control" formControlName="product_name" name="product_name" required />
-      <div class="text text-danger text-right" *ngIf="loginForm.get('product_name').touched && loginForm.get('product_name').invalid">
-        <div *ngIf="loginForm.get('product_name').errors.required">Required</div>
-        <div *ngIf="loginForm.get('product_name').errors.maxlength">Product name should be 5 digit long</div>
-        <div *ngIf="loginForm.get('product_name').errors.minlength">Product name should be minimum 3 digit long</div>
-        <div *ngIf="loginForm.get('product_name').errors.pattern">Product name should match with pattern</div>
+			<input class="form-control" formControlName="name" name="name" />
+      <div class="text text-danger text-right" *ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid">
+      <div *ngIf="loginForm.controls.name.errors.required"> Re </div>
         </div>
 </div>
 
@@ -21,7 +18,7 @@
 			<button class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form>
-<a routerLink="login">Reactive Form Using Form Builder >> </a>
+<a routerLink="">Reactive Form Using Form Builder >> </a>
 </div>
 
 
