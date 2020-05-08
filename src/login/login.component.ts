@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
 
   login(loginFormValues) {
     this.userService.getLoggedInUser(loginFormValues).subscribe(response => {
-      console.log(response['username']);
+      var obj = JSON.stringify(response);
+      var obj1=JSON.parse(obj);
+      console.log(obj1);
     });
   }
 
