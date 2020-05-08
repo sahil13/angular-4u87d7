@@ -29,12 +29,14 @@ export class LoginComponent implements OnInit {
 
   login(loginFormValues) {
     this.userService.getLoggedInUser(loginFormValues).subscribe(response => {
-      var obj = JSON.stringify(response);
-      var obj1 = JSON.parse(obj);
-      if(obj1[0].username!=''){
-      sessionStorage.setItem("username", obj1[0].username);
+      var len = response.length;
+      if (len >= 1) {
+        var obj = JSON.stringify(response);
+        var obj1 = JSON.parse(obj);
+        this.currentUser = obj1[0].username;
+        sessionStorage.setItem("username", obj1[0].username);
       }else{
-          sessionStorage.setItem("username","");
+         sessionStorage.setItem("username", "");
       }
     });
   }
