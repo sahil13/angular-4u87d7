@@ -5,7 +5,7 @@
 		"street": "123",
 		"city": "gurgaon"
 	}],
-	"img": "https://www.hul.co.in/Images/India-LUX-new-hand-wash-collection-310818_tcm1255-525690.jpg",
+	"img": "assets/lux.jpg",
 	"price": "70"
 },{
 	"name": "Nirma",
@@ -14,6 +14,6 @@
 		"street": "123",
 		"city": "gurgaon"
 	}],
-	"img": "https://i.ebayimg.com/images/g/BkgAAOSw-BtcxTro/s-l300.jpg",
+	"img": "assets/nirma.jpg",
 	"price": "50"
 }]
