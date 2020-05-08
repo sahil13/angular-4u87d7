@@ -2,13 +2,13 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
-export class USerService{
+export class UserService{
   constructor(private http: HttpClient){
 
   }
 
 getLoggedInUser(){
-  
+
 }
 
 }
