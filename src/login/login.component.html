@@ -8,7 +8,7 @@
 			<input (ngModel)="name" class="form-control" formControlName="name" name="name" required #name />
 			<div class="text text-danger text-right"
 				*ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid">
-		<!-- 		<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div> -->
+				<!-- 		<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div> -->
 			</div>
 		</div>
 
@@ -20,10 +20,10 @@
 			<button type="submit" class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form>
-<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
+	<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
 	<a routerLink="">Template driven Form >> </a> -->
 </div>
-
+{{currentUser}}
 
 <!-- unamePattern = "^[a-z0-9_-]{8,15}$";
   pwdPattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$";
