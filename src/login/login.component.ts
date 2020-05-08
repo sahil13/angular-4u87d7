@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { UserService } from "../services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -12,8 +13,9 @@ export class LoginComponent implements OnInit {
   name;
   password;
   currentUser;
+  flg:boolean=false;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,private router:Router) {
     this.name = new FormControl("", [
       Validators.required /* ,
       Validators.maxLength(3) */
@@ -35,8 +37,10 @@ export class LoginComponent implements OnInit {
         var obj1 = JSON.parse(obj);
         this.currentUser = obj1[0].username;
         sessionStorage.setItem("username", obj1[0].username);
+        this.router.navigate(["/products"]);
       }else{
          sessionStorage.setItem("username", "");
+         sessionStorage.setItem("flg", true);
       }
     });
   }

@@ -1,6 +1,11 @@
 <br/>
 <div class="col-md-6 offset-md-3">
 	<h2>Login</h2>
+
+<div class="alert alert-danger" *ngIf="flg">
+ Invalid Username and Password
+</div>
+
 	<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
 
 		<div class="form-group">
@@ -23,7 +28,6 @@
 	<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
 	<a routerLink="">Template driven Form >> </a> -->
 </div>
-{{currentUser}}
 
 <!-- unamePattern = "^[a-z0-9_-]{8,15}$";
   pwdPattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$";
