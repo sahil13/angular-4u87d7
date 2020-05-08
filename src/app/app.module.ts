@@ -21,8 +21,7 @@ import { UserService } from "../services/user.service";
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "login", component: LoginComponent },
-      { path: "", component: HomeComponent },
+      { path: "", component: LoginComponent },
       { path: "login", component: LoginComponent },
       { path: "products", component: ProductComponent },
       { path: "product-detail/:productId", component: ProductDetailComponent }
