@@ -8,7 +8,7 @@
 			<input (ngModel)="name" class="form-control" formControlName="name" name="name" required #name />
 			<div class="text text-danger text-right"
 				*ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid">
-				<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div>
+		<!-- 		<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div> -->
 			</div>
 		</div>
 

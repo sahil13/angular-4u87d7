@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private userService: UserService) {
     this.name = new FormControl("", [
-      Validators.required,
-      Validators.maxLength(3)
+      Validators.required/* ,
+      Validators.maxLength(3) */
     ]);
     this.password = new FormControl("", Validators.required);
     this.loginForm = new FormGroup({
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(loginFormValues) {
-    this.userService.getLoggedInUser().subscribe(response => {
+    this.userService.getLoggedInUser(loginFormValues).subscribe(response => {
       console.log(response);
     });
   }

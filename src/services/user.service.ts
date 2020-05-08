@@ -7,12 +7,12 @@ import { catchError } from "rxjs/operators";
 export class UserService {
   constructor(private http: HttpClient) {}
   API_URL = "http://shopnstop.in/api/user.php";
-  getLoggedInUser() {
+  getLoggedInUser(loginFormValues) {
     let httpOptions = {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
     };
     return this.http
-      .post(this.API_URL + "user.php", event, httpOptions)
+      .post(this.API_URL, loginFormValues, httpOptions)
       .pipe(
         catchError(this.handleError("saveEvent")) // then handle the error
       );
