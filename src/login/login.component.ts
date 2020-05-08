@@ -13,16 +13,21 @@ export class LoginComponent implements OnInit {
   password;
 
   constructor(private userService: UserService) {
-    this.name=new FormControl('',[Validators.required,Validators.maxLength(3)]);
-    this.password=new FormControl('',Validators.required);
+    this.name = new FormControl("", [
+      Validators.required,
+      Validators.maxLength(3)
+    ]);
+    this.password = new FormControl("", Validators.required);
     this.loginForm = new FormGroup({
-      name:this.name,
-      password:this.password
+      name: this.name,
+      password: this.password
     });
   }
 
-  login(loginFormValues){
-console.log(JSON.stringify(loginFormValues));
+  login(loginFormValues) {
+    this.userService.getLoggedInUser().subscribe(response => {
+      
+    });
   }
 
   ngOnInit() {}
