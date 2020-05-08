@@ -1,13 +1,13 @@
 <div class="container">
 	<div class="row">
-		<div class="col-mg-6 offset-md-3">
+		<div class="col-md-8 offset-md-2">
 	<!-- 	<div class="float-right"><a [routerLink]="['product']"><< Back to Product Page</a></div> -->
-	
-				<div class="col-md-10 product-back">
-          	<h3>{{filteredProduct.name}}</h3>
-					<div class="col-md-4 float-left"> <img [src]="filteredProduct.img" class="img-responsive" width="200px" /> </div>
+	<br/>
+				<div class="col-md-12">
+          	
+					<div class="col-md-4 float-left"> <img [src]="filteredProduct.img" class="img-responsive" width="100%" /> </div>
 					<div class="col-md-8 float-left"> 
-              <div> {{filteredProduct.desc}} </div>
+              <div> {{filteredProduct.desc | titlecase}} </div> <br/>
               <div>Price -  {{filteredProduct.price | currency:'INR'}}</div>
               <div>{{filteredProduct.location.city}}</div>
           </div>
