@@ -12,6 +12,7 @@ import { ProductComponent } from "../product/product.component";
 import { ProductDetailComponent } from "../product-detail/product-detail.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ProductService } from "../services/product.service";
+import { UserService } from "../services/user.service";
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { ProductService } from "../services/product.service";
     ProductDetailComponent
   ],
    providers: [
-    ProductService
+    ProductService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,7 @@
 <br/>
 <div class="col-md-6 offset-md-3">
 	<h1>Form Group </h1>
-	<form [formGroup]="loginForm" autocomplete="off">
+	<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
 
 		<div class="form-group">
 			<label>User Name</label>
@@ -14,14 +14,14 @@
 
 		<div class="form-group">
 			<label>Password</label>
-			<input class="form-control" formControlName="password" name="password" />
+			<input type="password" class="form-control" formControlName="password" name="password" />
 </div>
 
-			<button class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
+			<button type="submit" class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form>
-	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
-	<a routerLink="">Template driven Form >> </a>
+<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
+	<a routerLink="">Template driven Form >> </a> -->
 </div>
 
 
