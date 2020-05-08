@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+		<div class="col-mg-6 offset-md-3">
+		
+				<div class="col-md-10 product-back">
+					<span class="col-md-4 float-left"> <img [src]="selectedProduct.img" class="img-responsive" width="200px" /> </span>
+					<span class="col-md-8 float-left"> {{selectedProduct.desc}} </span>
+					<span class="col-md-3 float-left"> Price -  {{selectedProduct.price | currency:'INR'}} </span>
+
+					<span class="col-md-5 float-right">
+             <a [routerLink]="['/product-detail', selectedProduct.id]" > Detail </a>
+          </span>
+
+
+				
+			</div>
+		</div>
+	</div>
+</div>
