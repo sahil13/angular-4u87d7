@@ -4,8 +4,8 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class ProductService {
   constructor(private http: HttpClient) {}
-  API_URL = "./json-files/product.json";
+  API_URL = "assets/products.json";
   getProducts() {
-    this.http.get(this.API_URL);
+    return this.http.get(this.API_URL);
   }
 }
