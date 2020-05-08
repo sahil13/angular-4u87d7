@@ -6,13 +6,14 @@ import { catchError } from "rxjs/operators";
 @Injectable()
 export class UserService {
   constructor(private http: HttpClient) {}
-  API_URL = "https://shopnstop.in/api/user.php";
+  API_URL = "http://shopnstop.in/api/user.php";
   getLoggedInUser(loginFormValues) {
     let httpOptions = {
       headers: new HttpHeaders(
         { 
         "Content-Type": "application/json",
-        "Referrer-Policy": "no-referrer"
+        "Referrer-Policy": "no-referrer, strict-origin-when-cross-origin",
+        "Referer":"https://angular-4u87d7.stackblitz.io/"
        })
     };
     return this.http
