@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-mg-6 offset-md-3">
-			<div *ngFor="let product of products">
+			<div *ngFor="let product of products;let i = index">
 
 				<div class="col-md-10 product-back">
 					<span class="col-md-4 float-left"> <img [src]="product.img" class="img-responsive" width="200px" /> </span>
@@ -9,11 +9,12 @@
 					<span class="col-md-3 float-left"> Price -  {{product.price | currency:'INR'}} </span>
 
 					<span class="col-md-5 float-right">
-             <a [routerLink]="['/product-detail', product.id]" > Detail </a>
+             <a [routerLink]="['/product-detail',i]" > Detail </a>
           </span>
 
 
 				</div>
+        {{i+1}}
 			</div>
 		</div>
 	</div>
