@@ -6,11 +6,13 @@
 				<div class="col-md-12">
           	
 					<div class="col-md-4 float-left"> <img [src]="filteredProduct.img" class="img-responsive" width="100%" /> </div>
-					<div class="col-md-8 float-left"> 
+					<div class="col-md-8 float-left product-detail-back"> 
               <div> {{filteredProduct.desc | titlecase}} </div> <br/>
               <div>Price -  {{filteredProduct.price | currency:'INR'}}</div>
-              <div>{{filteredProduct.location.city}}</div>
+              <div>{{filteredProduct.location.city}}</div> <br/>
+               <button class="btn btn-primary float-right col-md-12">Add to cart</button>
           </div>
+         
 			</div>
 		</div>
 	</div>
