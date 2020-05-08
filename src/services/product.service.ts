@@ -6,6 +6,6 @@ export class ProductService {
   constructor(private http: HttpClient) {}
   API_URL = "assets/products.json";
   getProducts(id?: number) {
-    return this.http.get(this.API_URL, JSON.stringify(id));
+    return this.http.get(this.API_URL);
   }
 }

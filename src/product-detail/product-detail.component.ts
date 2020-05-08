@@ -9,18 +9,16 @@ import { ProductService } from "../services/product.service";
 })
 export class ProductDetailComponent implements OnInit {
   productId;
-  selectedProduct;
+  filteredProduct;
 
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductService
-  ) {
-    this.route.paramMap.subscribe(params => {
-      let productId=+params.get("productId");
-      this.selectedProduct = this.productService.getProducts(productId)
-        
-
+  constructor(private route: ActivatedRoute, private productService: ProductService ) {
+    this.productId=this.route.snapshot.params['productId'];
+   this.productService.getProducts(this.productId).subscribe(res=>{
+         this.filteredProduct=res.find(event =>  event.name === "Nirma" )
     });
+
+    
+   
   }
 
   ngOnInit() {}
