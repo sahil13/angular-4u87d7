@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError } from "rxjs/operators";
 
 @Injectable()
@@ -11,7 +12,7 @@ export class UserService {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
     };
     return this.http
-      .post(this.API_URL + "saverecords.php", event, httpOptions)
+      .post(this.API_URL + "user.php", event, httpOptions)
       .pipe(
         catchError(this.handleError("saveEvent")) // then handle the error
       );
