@@ -10,12 +10,15 @@ import { HomeComponent } from "../home/home.component";
 import { LoginComponent } from "../login/login.component";
 import { ProductComponent } from "../product/product.component";
 import { ProductDetailComponent } from "../product-detail/product-detail.component";
+import { HttpClientModule } from "@angular/common/http";
+import { ProductService } from "../services/product.service";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: "", component: HomeComponent },
       { path: "login", component: LoginComponent },
@@ -31,6 +34,9 @@ import { ProductDetailComponent } from "../product-detail/product-detail.compone
     ProductComponent,
     LoginComponent,
     ProductDetailComponent
+  ],
+   providers: [
+    ProductService
   ],
   bootstrap: [AppComponent]
 })
