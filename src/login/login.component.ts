@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   name;
   password;
   currentUser;
-  flg = true;
+  flg;
 
   constructor(private userService: UserService, private router: Router) {
     this.name = new FormControl("", [
@@ -27,12 +27,10 @@ export class LoginComponent implements OnInit {
     });
 
     this.currentUser = sessionStorage.getItem("username");
-    if (this.currentUser != "") {
+    
       this.flg = sessionStorage.getItem("flg");
-    } else {
-      this.flg = this.flg;
-    }
-    console.log("flag==="+this.flg);
+      console.log("flag======"+this.flg);
+   
   }
 
   login(loginFormValues) {
@@ -43,11 +41,12 @@ export class LoginComponent implements OnInit {
         var obj1 = JSON.parse(obj);
         this.currentUser = obj1[0].username;
         sessionStorage.setItem("username", obj1[0].username);
-        this.router.navigate(["/products"]);
+        sessionStorage.setItem("flg", false);
+       // this.router.navigate(["/products"]);
       } else {
         console.log("sdsd");
         //sessionStorage.setItem("username", "");
-        sessionStorage.setItem("flg", false);
+        sessionStorage.setItem("flg", true);
       }
     });
   }
