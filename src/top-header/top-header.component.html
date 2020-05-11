@@ -20,5 +20,14 @@
         <a class="nav-link" href="#">Files</a>
       </li>
     </ul>
-  </div>
+     
+     <div style="color:#fff;">
+       
+       <span *ngIf="this.currentUser">{{this.currentUser}}</span>
+       <span *ngIf="!this.currentUser">Login</span>
+       <span *ngIf="this.currentUser" (click)="logout()">Logout</span>
+       </div>
+   
+   </div>
+  
 </nav>
