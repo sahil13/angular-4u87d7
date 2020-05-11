@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ProductService } from "../services/product.service";
 
 @Component({
@@ -10,12 +10,20 @@ import { ProductService } from "../services/product.service";
 export class ProductComponent implements OnInit {
   index = 0;
   products;
+  currentUser;
+  constructor(private productService: ProductService, private router: Router) {
+    this.currentUser = sessionStorage.getItem("username");
+  }
 
-  constructor(private productService: ProductService) {}
+logout() {
+    this.currentUser = "";
+    sessionStorage.setItem("username", "");
+    this.router.navigate(["/login"]);
+  }
 
   ngOnInit() {
     this.productService.getProducts().subscribe(res => {
-     // console.log(res);
+      // console.log(res);
       this.products = res;
     });
   }

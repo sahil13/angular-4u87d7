@@ -22,7 +22,6 @@
     </ul>
      
      <div style="color:#fff;">
-       
        <span *ngIf="this.currentUser">{{this.currentUser}}</span>
        <span *ngIf="!this.currentUser" routerLink="/login">Login</span>
        <span *ngIf="this.currentUser" (click)="logout()">Logout</span>
