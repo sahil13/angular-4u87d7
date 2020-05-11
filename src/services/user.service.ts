@@ -7,8 +7,8 @@ import { catchError } from "rxjs/operators";
 export class UserService {
   constructor(private http: HttpClient) {}
   API_URL = "https://shopnstop.in/api/user.php";
-  
-  @Output() currentUser: EventEmitter<any> = new EventEmitter();
+  userName: string;
+ 
   getLoggedInUser(loginFormValues) {
     let httpOptions = {
       headers: new HttpHeaders({
@@ -23,12 +23,12 @@ export class UserService {
   setUserName(response) {
     var obj = JSON.stringify(response);
     var obj1 = JSON.parse(obj);
-    this.currentUser = obj1[0].username;
-    sessionStorage.setItem("username", obj1[0].username);
+    this.userName = obj1[0].username;    
+     sessionStorage.setItem("username", obj1[0].username);
   }
-  getUserName() {
-    return sessionStorage.getItem("username");
-  }
+   getUserName() {
+    return  sessionStorage.getItem("username");
+  } 
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {

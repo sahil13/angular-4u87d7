@@ -10,14 +10,18 @@ import { UserService } from "../services/user.service";
 export class TopHeaderComponent implements OnInit {
   currentUser;
   constructor(private userService: UserService, private router: Router) {
-    this.currentUser = this.userService.getUserName();
+    this.currentUser=sessionStorage.getItem("username");
   }
 
-  logout() {
+   logout() {
     this.currentUser = "";
     sessionStorage.setItem("username", "");
     this.router.navigate(["/login"]);
+  } 
+
+  ngOnInit() {
+  //  this.currentUser = this.userService.getUserName();
   }
 
-  ngOnInit() {}
+
 }
