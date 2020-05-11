@@ -2,13 +2,18 @@ import { Injectable, Output, EventEmitter } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError } from "rxjs/operators";
+import { Resolver } from "@angular/core/testing/src/resolvers";
 
 @Injectable()
-export class UserService {
+export class UserService implements Resolver {
   constructor(private http: HttpClient) {}
   API_URL = "https://shopnstop.in/api/user.php";
   userName: string;
  
+ resolve(){
+   
+ }
+
   getLoggedInUser(loginFormValues) {
     let httpOptions = {
       headers: new HttpHeaders({
