@@ -13,8 +13,8 @@
 			<input (ngModel)="name" class="form-control" formControlName="name" name="name" required #name />
 			<div class="text text-danger text-right"
 				*ngIf="loginForm.controls.name.touched && loginForm.controls.name.invalid"> -->
-				<!-- 		<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div> -->
-		<!-- 	</div>
+<!-- 		<div *ngIf="loginForm.controls.name.errors.maxlength"> Name should be 3 Char long </div> -->
+<!-- 	</div>
 		</div>
 
 		<div class="form-group">
@@ -25,7 +25,7 @@
 			<button type="submit" class="btn btn-primary col-md-12" [disabled]="loginForm.invalid">Submit</button>
 
 	</form> -->
-	<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
+<!-- 	<a routerLink="">Reactive Form Using Form Builder >> </a><br/>
 	<a routerLink="">Template driven Form >> </a> -->
 <!-- </div> -->
 
@@ -33,9 +33,25 @@
   pwdPattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$";
   mobnumPattern = "^((\\+91-?)|0)?[0-9]{10}$"; 
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"; -->
+<div class="p-grid p-nogutter">
+	<div class="p-col">
+    car details
+	<!-- 	<img class="p-col-12 p-col-nogutter" src="https://www.hul.co.in/Images/India-LUX-new-hand-wash-collection-310818_tcm1255-525690.jpg" /> -->
+  </div>
+	</div> <br/>
 
-  <div class="p-grid p-justify-center">
-<div class="p-col-12 p-md-6 p-lg-3 grid-back">Daikin. Daikin is the inventor of variable refrigerant volume systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in the split system air conditioning market, having made the first split and multi-split air conditioners.</div>
-<div class="p-col-12 p-md-6 p-lg-3 grid-back">Daikin. Daikin is the inventor of variable refrigerant volume systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in the split system air conditioning market, having made the first split and multi-split air conditioners.</div>
-<div class="p-col-12 p-md-6 p-lg-3 grid-back">Daikin. Daikin is the inventor of variable refrigerant volume systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in the split system air conditioning market, having made the first split and multi-split air conditioners.</div>
-<div class="p-col-12 p-md-6 p-lg-3 grid-back">Daikin. Daikin is the inventor of variable refrigerant volume systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in the split system air conditioning market, having made the first split and multi-split air conditioners.</div>
+	<article class="p-grid p-justify-even p-nogutter">
+		<section class="grid-back p-md-6 p-lg-3 m-b-10 ">Daikin. Daikin is the inventor of variable refrigerant volume
+			systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF).</section>
+		<section class="grid-back p-md-6 p-lg-3 m-b-10">Daikin. Daikin is the inventor of variable refrigerant volume
+			systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in
+			the split system air conditioning market, having made the first split and multi-split air conditioners.
+		</section>
+	 	<section class="grid-back p-md-6 p-lg-3 m-b-10">Daikin. Daikin is the inventor of variable refrigerant volume
+			systems (or VRV by Daikin air conditioning, other manufacturers remarked this as VRF) and an innovator in
+			the split system air conditioning market, having made the first split and multi-split air conditioners.
+		</section> 
+    
+	</article>
+
+	
